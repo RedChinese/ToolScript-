@@ -4,17 +4,16 @@ on:
     branches:
       - main
       - release/*
-
 jobs: 
- build:
- 　runs-on: macos-10.15
-  steps: 
-   - user: actions/checkout@v3
-   - name: Build .whl
-     run: |
-      cd python
-      python -m pip install --upgrade build
-      python -m build
+  build:
+ 　 runs-on: macos-10.15
+    steps: 
+    - user: actions/checkout@v3
+    - name: Build .whl
+      run: |
+        cd python
+        python -m pip install --upgrade build
+        python -m build
    
 
     
