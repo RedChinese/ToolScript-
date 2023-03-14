@@ -1,1 +1,12 @@
-name :build python .whl
+name: build python .whl
+on:
+  push:
+    branches:
+      - main
+      - release/*
+
+jobs: 
+  my_job:
+    name: deploy to staging
+    runs-on: macos-latest
+    
